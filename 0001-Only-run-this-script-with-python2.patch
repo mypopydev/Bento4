@@ -1,0 +1,22 @@
+From bce49c0a91db1fc3c228febc8147cc677a4f1216 Mon Sep 17 00:00:00 2001
+From: Jun Zhao <barryjzhao@tencent.com>
+Date: Sun, 8 Sep 2019 10:04:37 +0800
+Subject: [PATCH] Only run this script with python2
+
+Signed-off-by: Jun Zhao <barryjzhao@tencent.com>
+---
+ Source/Python/wrappers/mp4hls | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Source/Python/wrappers/mp4hls b/Source/Python/wrappers/mp4hls
+index a320dd1..de725f8 100755
+--- a/Source/Python/wrappers/mp4hls
++++ b/Source/Python/wrappers/mp4hls
+@@ -1,3 +1,3 @@
+ #! /bin/bash
+ BASEDIR=$(dirname $0)
+-exec python "$BASEDIR/../utils/mp4-hls.py" "$@"
++exec python2 "$BASEDIR/../utils/mp4-hls.py" "$@"
+-- 
+2.20.1
+
